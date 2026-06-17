@@ -1,0 +1,141 @@
+{
+    "CLIMATE_DATA_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/Climate data/",
+    "OUTPUT_BASE_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Model/",
+    "REF_ASCII_PATH": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Model/sc1gr6.fil.asc",
+    "WORLDCLIM_DATA_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/Climate data/Model/Input_Climate_WorldClim/",
+    "TARGET_CRS": "EPSG:5186",
+    "N_FOLDS": 3,
+    "SDMMODEL_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Output/SDM_Legacy",
+    "YEAR_COUNT": 80,
+    "THRESHOLD_METHOD": "Youden",
+    "BASELINE_SCENARIO": "ssp126",
+    "BASELINE_YEAR": 2021,
+    "APPLY_Z_TRANSFORM": false,
+    "APPLY_HOT_CONSTRAINT": true,
+    "APPLY_COLD_CONSTRAINT": true,
+    "BG_RATIO": 12,
+    "MIN_BG_POINTS": 500,
+    "MAXENT_PARAMS": {
+        "feature_types": [
+            "linear",
+            "quadratic",
+            "hinge",
+            "threshold"
+        ],
+        "beta_multipliers": [
+            2.0
+        ],
+        "n_cpus": -1
+    },
+    "SCENARIOS": [
+        "SSP126",
+        "SSP245",
+        "SSP370",
+        "SSP585"
+    ],
+    "VARIABLES_MAP": {
+        "RHM": {
+            "name": "Relative Humidity",
+            "prefix": "sc1gr_rhm"
+        },
+        "RN": {
+            "name": "Rainfall",
+            "prefix": "sc1gr5"
+        },
+        "SI": {
+            "name": "Solar Insolation",
+            "prefix": "sc1gr_si"
+        },
+        "TA": {
+            "name": "Temperature Avg",
+            "prefix": "sc1gr6"
+        },
+        "TAMAX": {
+            "name": "Temperature Max",
+            "prefix": "sc1gr_tamax"
+        },
+        "TAMIN": {
+            "name": "Temperature Min",
+            "prefix": "sc1gr_tamin"
+        },
+        "WS": {
+            "name": "Wind Speed",
+            "prefix": "sc1gr_ws"
+        }
+    },
+    "BIOCLIM_NAMES": {
+        "bio1": "Annual Mean Temperature",
+        "bio2": "Mean Diurnal Range",
+        "bio3": "Isothermality",
+        "bio4": "Temperature Seasonality",
+        "bio5": "Max Temperature of Warmest Month",
+        "bio6": "Min Temperature of Coldest Month",
+        "bio7": "Temperature Annual Range",
+        "bio8": "Mean Temperature of Wettest Quarter",
+        "bio9": "Mean Temperature of Driest Quarter",
+        "bio10": "Mean Temperature of Warmest Quarter",
+        "bio11": "Mean Temperature of Coldest Quarter",
+        "bio12": "Annual Precipitation",
+        "bio13": "Precipitation of Wettest Month",
+        "bio14": "Precipitation of Driest Month",
+        "bio15": "Precipitation Seasonality",
+        "bio16": "Precipitation of Wettest Quarter",
+        "bio17": "Precipitation of Driest Quarter",
+        "bio18": "Precipitation of Warmest Quarter",
+        "bio19": "Precipitation of Coldest Quarter"
+    },
+    "VARIABLE_LABELS": {
+        "elevation": "Elevation (\uace0\ub3c4)",
+        "slope": "Slope (\uacbd\uc0ac\ub3c4)",
+        "soildeep3": "Soil Depth (\ud1a0\uc2ec)",
+        "soildra1": "Soil Drainage (\ubc30\uc218\ub4f1\uae09)",
+        "soilstone": "Soil Stone Content (\uc790\uac08\ud568\ub7c9)",
+        "VPD": "Vapor Pressure Deficit (\uc218\ubd84 \uacb0\ud54d \uc9c0\uc218)",
+        "solarradiation": "Solar Radiation (\uc77c\uc0ac\ub7c9)",
+        "relative_humidity": "Relative Humidity (\uc0c1\ub300\uc2b5\ub3c4)",
+        "LULC": "Land Use and Land Cover (\ud1a0\uc9c0\ud53c\ubcf5)"
+    },
+    "ENV_LAYERS": {
+        "topography": [
+            "elevation",
+            "slope"
+        ],
+        "soil": [
+            "soildeep3",
+            "soildra1",
+            "soilstone"
+        ],
+        "bioclim": [
+            1,
+            2,
+            3,
+            12,
+            13,
+            14
+        ],
+        "climate": [
+            "VPD",
+            "solarradiation",
+            "relative_humidity"
+        ],
+        "landcover": [
+            "LULC"
+        ]
+    },
+    "CATEGORICAL_LAYERS": [
+        "LULC"
+    ],
+    "LULC_CATEGORIES": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "PLANT_GPKG_PATH": "../Data/Plant_Spatial_Data_05Feb2026.gpkg",
+    "SIDO_SHP_PATH": "/Users/seo-b/Library/CloudStorage/Dropbox/GIS Data/Korea/Admin/BND_SIDO_PG/BND_SIDO_PG_TM.shp",
+    "LULC_RUN_BASE_DIR": "/Users/seo-b/CLUE_Scenario runs/",
+    "CMIP6_KOREA_DIR": "/Users/seo-b/Downloads/Climate data/Korea/AR6_Monthly"
+}
