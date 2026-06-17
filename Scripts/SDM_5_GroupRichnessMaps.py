@@ -28,7 +28,7 @@ from pathlib import Path
 
 import json
 try:
-    with open("../sdm_config.json", "r", encoding="utf-8") as _f:
+    with open("../SDM_config.json", "r", encoding="utf-8") as _f:
         _cfg = json.load(_f)
 except:
     _cfg = {}
@@ -375,7 +375,7 @@ def main():
             print(f"Starting pipeline for mode: {phys_mode.upper()} & {lulc_mode.upper()}")
             print(f"{'='*50}")
             
-            map_out_dir = Path(SDM_OUTPUT_DIR) / f"GroupMaps_{phys_mode}_{lulc_mode}"
+            map_out_dir = Path("../Output/Plotting") / f"GroupRichnessMaps_{phys_mode}_{lulc_mode}"
             raster_out_dir = map_out_dir / "Rasters"
             map_out_dir.mkdir(parents=True, exist_ok=True)
             raster_out_dir.mkdir(parents=True, exist_ok=True)

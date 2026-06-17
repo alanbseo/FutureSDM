@@ -10,7 +10,7 @@ import warnings
 
 import json
 try:
-    with open("../sdm_config.json", "r", encoding="utf-8") as _f:
+    with open("../SDM_config.json", "r", encoding="utf-8") as _f:
         _cfg = json.load(_f)
 except:
     _cfg = {}
@@ -97,7 +97,7 @@ lulc_dtype = pd.CategoricalDtype(categories=lulc_categories, ordered=False)
 
 all_columns = continuous_cols + categorical_cols
 
-output_dir = '../Output/SDM/ResponseCurves_Aggregated'
+output_dir = '../Output/Plotting/ResponseCurves_Aggregated'
 os.makedirs(output_dir, exist_ok=True)
 
 model_dir = os.path.join(config.get('SDMMODEL_DIR', '../Output/SDM_Legacy'), 'Models')

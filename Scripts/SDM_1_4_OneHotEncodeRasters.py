@@ -38,7 +38,7 @@ def one_hot_encode_raster(input_raster_path, output_dir, categories):
 
 if __name__ == "__main__":
     # --- CONFIGURATION ---
-    config_path = os.path.join('SDM', "../sdm_config.json")
+    config_path = os.path.join('SDM', "../SDM_config.json")
     with open(config_path, 'r') as f:
         config = json.load(f)
     

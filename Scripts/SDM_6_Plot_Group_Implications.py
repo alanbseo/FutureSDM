@@ -13,7 +13,7 @@ import seaborn as sns
 
 import json
 try:
-    with open("../sdm_config.json", "r", encoding="utf-8") as _f:
+    with open("../SDM_config.json", "r", encoding="utf-8") as _f:
         _cfg = json.load(_f)
 except:
     _cfg = {}
@@ -23,7 +23,7 @@ plt.rcParams['font.family'] = 'AppleGothic'
 plt.rcParams['axes.unicode_minus'] = False
 sns.set_theme(style="whitegrid", rc={"font.family": "AppleGothic", "axes.unicode_minus": False})
 
-OUTPUT_DIR = "../Output/SDM/Group_Implications"
+OUTPUT_DIR = "../Output/Plotting/Group_Implications"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 PLANT_GPKG_PATH = _cfg.get("PLANT_GPKG_PATH", "../Data/Plant_Spatial_Data_05Feb2026.gpkg")

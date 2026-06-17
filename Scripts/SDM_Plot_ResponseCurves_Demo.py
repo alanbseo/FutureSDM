@@ -95,7 +95,7 @@ lulc_dtype = pd.CategoricalDtype(categories=lulc_categories, ordered=False)
 
 all_columns = continuous_cols + categorical_cols
 
-output_dir = '../Output/SDM/ResponseCurves'
+output_dir = '../Output/Plotting/ResponseCurves'
 os.makedirs(output_dir, exist_ok=True)
 
 models = glob.glob('../Output/SDM/Models/MaxEnt_baseline_*.pkl')

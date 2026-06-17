@@ -16,7 +16,7 @@ from rasterio.features import rasterize
 
 import json
 try:
-    with open("../sdm_config.json", "r", encoding="utf-8") as _f:
+    with open("../SDM_config.json", "r", encoding="utf-8") as _f:
         _cfg = json.load(_f)
 except:
     _cfg = {}
@@ -30,7 +30,7 @@ except ImportError:
 # --- Configuration ---
 
 # Load SDM Config
-with open(os.path.join(os.path.dirname(__file__), "../sdm_config.json"), 'r') as f:
+with open(os.path.join(os.path.dirname(__file__), "../SDM_config.json"), 'r') as f:
     sdm_config = json.load(f)
 
 # Load Species List from 'models' folder

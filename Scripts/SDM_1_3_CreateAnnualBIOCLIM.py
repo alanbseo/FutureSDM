@@ -10,7 +10,7 @@ import warnings
 
 import json
 try:
-    with open("../sdm_config.json", "r", encoding="utf-8") as _f:
+    with open("../SDM_config.json", "r", encoding="utf-8") as _f:
         _cfg = json.load(_f)
 except:
     _cfg = {}
