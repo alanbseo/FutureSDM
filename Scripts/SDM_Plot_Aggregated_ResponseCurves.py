@@ -30,7 +30,7 @@ plt.rcParams['font.family'] = 'AppleGothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 print("1. Loading configurations and group data...")
-config_path = 'SDM/sdm_config.json'
+config_path = '../SDM_config.json'
 with open(config_path, 'r') as f:
     config = json.load(f)
 

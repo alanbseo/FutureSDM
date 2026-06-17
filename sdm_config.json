@@ -1,11 +1,11 @@
 {
-    "CLIMATE_DATA_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/Climate data/",
-    "OUTPUT_BASE_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Model/",
-    "REF_ASCII_PATH": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Model/sc1gr6.fil.asc",
-    "WORLDCLIM_DATA_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/Climate data/Model/Input_Climate_WorldClim/",
+    "CLIMATE_DATA_DIR": "../Climate_Data/",
+    "OUTPUT_BASE_DIR": "../Output/Climate/",
+    "REF_ASCII_PATH": "../Climate_Data/sc1gr6.fil.asc",
+    "WORLDCLIM_DATA_DIR": "../Climate_Data/WorldClim/",
     "TARGET_CRS": "EPSG:5186",
     "N_FOLDS": 3,
-    "SDMMODEL_DIR": "/Users/seo-b/Library/CloudStorage/Dropbox/Modelling/LUC/CLUE/DynaCLUE_Calibration/Output/SDM_Legacy",
+    "SDMMODEL_DIR": "../Model/",
     "YEAR_COUNT": 80,
     "THRESHOLD_METHOD": "Youden",
     "BASELINE_SCENARIO": "ssp126",
@@ -85,15 +85,15 @@
         "bio19": "Precipitation of Coldest Quarter"
     },
     "VARIABLE_LABELS": {
-        "elevation": "Elevation (\uace0\ub3c4)",
-        "slope": "Slope (\uacbd\uc0ac\ub3c4)",
-        "soildeep3": "Soil Depth (\ud1a0\uc2ec)",
-        "soildra1": "Soil Drainage (\ubc30\uc218\ub4f1\uae09)",
-        "soilstone": "Soil Stone Content (\uc790\uac08\ud568\ub7c9)",
-        "VPD": "Vapor Pressure Deficit (\uc218\ubd84 \uacb0\ud54d \uc9c0\uc218)",
-        "solarradiation": "Solar Radiation (\uc77c\uc0ac\ub7c9)",
-        "relative_humidity": "Relative Humidity (\uc0c1\ub300\uc2b5\ub3c4)",
-        "LULC": "Land Use and Land Cover (\ud1a0\uc9c0\ud53c\ubcf5)"
+        "elevation": "Elevation (고도)",
+        "slope": "Slope (경사도)",
+        "soildeep3": "Soil Depth (토심)",
+        "soildra1": "Soil Drainage (배수등급)",
+        "soilstone": "Soil Stone Content (자갈함량)",
+        "VPD": "Vapor Pressure Deficit (수분 결핍 지수)",
+        "solarradiation": "Solar Radiation (일사량)",
+        "relative_humidity": "Relative Humidity (상대습도)",
+        "LULC": "Land Use and Land Cover (토지피복)"
     },
     "ENV_LAYERS": {
         "topography": [
@@ -135,7 +135,7 @@
         6
     ],
     "PLANT_GPKG_PATH": "../Data/Plant_Spatial_Data_05Feb2026.gpkg",
-    "SIDO_SHP_PATH": "/Users/seo-b/Library/CloudStorage/Dropbox/GIS Data/Korea/Admin/BND_SIDO_PG/BND_SIDO_PG_TM.shp",
-    "LULC_RUN_BASE_DIR": "/Users/seo-b/CLUE_Scenario runs/",
-    "CMIP6_KOREA_DIR": "/Users/seo-b/Downloads/Climate data/Korea/AR6_Monthly"
+    "SIDO_SHP_PATH": "../GIS_Data/BND_SIDO_PG_TM.shp",
+    "LULC_RUN_BASE_DIR": "../LULC_Scenarios/",
+    "CMIP6_KOREA_DIR": "../Climate_Data/CMIP6/"
 }

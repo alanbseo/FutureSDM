@@ -150,11 +150,7 @@ def process_stats_for_mode(run_mode, project_root):
     # Calculate for each group
     try:
         import geopandas as gpd
-        PLANT_GPKG_PATH = (
-            "../Data/"
-            "NIE Data/생태계서비스팀 공간정보/07. 전국자연환경조사/"
-            "Plant_Spatial_Data_05Feb2026.gpkg"
-        )
+        PLANT_GPKG_PATH = "../Data/Plant_Spatial_Data_05Feb2026.gpkg"
         print("Loading plant spatial data for group membership...")
         gdf = gpd.read_file(PLANT_GPKG_PATH)
         

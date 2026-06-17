@@ -18,7 +18,7 @@ except:
 
 
 # --- CONFIGURATION ---
-CONFIG_PATH = 'SDM/sdm_config.json'
+CONFIG_PATH = '../SDM_config.json'
 with open(CONFIG_PATH, 'r') as f:
     config = json.load(f)
 

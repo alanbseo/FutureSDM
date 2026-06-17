@@ -14,7 +14,7 @@ import rioxarray
 import xarray as xr
 import json
 import joblib
-from SDM.SDM_functions import extract_values_at_points
+from SDM_functions import extract_values_at_points
 
 import json
 try:
@@ -25,8 +25,8 @@ except:
 
 
 # --- CONFIGURATION FROM JSON ---
-config_path = os.path.join('SDM/sdm_config.json')
-# config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'SDM/sdm_config.json')
+config_path = os.path.join('../SDM_config.json')
+# config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../SDM_config.json')
 with open(config_path, 'r') as f:
     config = json.load(f)
 
@@ -166,7 +166,7 @@ species_records_gt10.shape
 # %%
 # %%
 # save to csv
-out_dir = os.path.join("Output", "SDM")
+out_dir = os.path.join("..", "Output", "SDM")
 os.makedirs(out_dir, exist_ok=True)
 species_records_df.to_csv(os.path.join(out_dir, "species_records.csv"), index=False)
 print(f"Saved species records to {os.path.join(out_dir, 'species_records.csv')}")
@@ -195,7 +195,7 @@ print(f"Saved species records to {os.path.join(out_dir, 'species_records.csv')}"
 # %%
 # --- LOAD ENVIRONMENTAL DATA ---
 # Define Project Root (One level up from SDM folder)
-PRJ_ROOT = os.path.dirname(".")
+PRJ_ROOT = ".."
 
 BIOCLIM_DIR = os.path.join(PRJ_ROOT, "Model", "Input_Bioclim_KMA")
 MODELINPUT_DIR = os.path.join(PRJ_ROOT, "Model")
@@ -406,7 +406,7 @@ def process_species_sdm(target_species, plant_spatial_data, env_layers, src, tra
     print(f'Selected Species: {target_species}, Presence records: {len(presence_gdf)}')
 
     # Save presence_gdf
-    gdf_dir = 'gdf'
+    gdf_dir = os.path.join('..', 'Model', 'gdf')
     os.makedirs(gdf_dir, exist_ok=True)
     presence_gdf.to_file(os.path.join(gdf_dir, f'{target_species}_presence.gpkg'), driver='GPKG')
     print(f"Saved presence_gdf to {gdf_dir}/{target_species}_presence.gpkg")

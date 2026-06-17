@@ -49,11 +49,7 @@ FULL_SCENARIO_FNAMES = [
 
 TARGET_YEAR = 2050
 
-PLANT_GPKG_PATH = (
-    "../Data/"
-    "NIE Data/생태계서비스팀 공간정보/07. 전국자연환경조사/"
-    "Plant_Spatial_Data_05Feb2026.gpkg"
-)
+PLANT_GPKG_PATH = "../Data/Plant_Spatial_Data_05Feb2026.gpkg"
 
 SDM_OUTPUT_DIR = "../Output/SDM"
 
@@ -348,7 +344,7 @@ def plot_combinations(group_species: dict, stats_dict: dict, map_out_dir: Path, 
 # Main
 # ---------------------------------------------------------------------------
 def main():
-    with open("SDM/sdm_config.json", "r") as f:
+    with open("../SDM_config.json", "r") as f:
         config = json.load(f)
     models_dir = Path(config.get("SDMMODEL_DIR", SDM_OUTPUT_DIR)) / "Models"
     modelled_species = set()
